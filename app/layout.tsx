@@ -1,18 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Quicksand } from "next/font/google";
 
-const roboto = Roboto({
-  weight: "400",
-  subsets: ["latin-ext"],
-});
-
-import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/ThemeToggle";
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Paradox Shop",
-  description: "Pehle istemal kro fir vishwaash kro",
+  description: "The Beautiful Paradox Shop",
 };
 
 export default function RootLayout({
@@ -22,12 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ModeToggle />
-          {children}
-        </ThemeProvider>
-      </body>
+      <body className={quicksand.className}>{children}</body>
     </html>
   );
 }
