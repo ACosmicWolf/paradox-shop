@@ -1,33 +1,22 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import './globals.css'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
-const roboto = Roboto({
-  weight: "400",
-  subsets: ["latin-ext"],
-});
-
-import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/ThemeToggle";
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Paradox Shop",
-  description: "Pehle istemal kro fir vishwaash kro",
-};
+  title: 'Paradox Shop',
+  description: 'The Beautiful Paradox Shop',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ModeToggle />
-          {children}
-        </ThemeProvider>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
-  );
+  )
 }
