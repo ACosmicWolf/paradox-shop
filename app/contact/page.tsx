@@ -51,11 +51,11 @@ export default function ContactPage() {
   return (
     <div>
       <div className="flex justify-center w-full">
-        <Card className="max-w-2xl w-full p-8">
+        <Card className="max-w-4xl w-full p-8">
           <CardHeader>
             <CardTitle>Contact Me</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex space-x-20">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -112,17 +112,29 @@ export default function ContactPage() {
                 <Button type="submit">Submit</Button>
               </form>
             </Form>
+
+            <div>
+              <iframe
+                className="focus:outline-none rounded-sm bg-inherit"
+                src="https://discord.com/widget?id=1139558352007995545&theme=dark"
+                width="350"
+                height="500"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+              ></iframe>
+
+              {/* Link if above is not working */}
+              <a
+                href="https://discord.gg/3YzKb2X"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600 mt-1"
+              >
+                Join the discord
+              </a>
+            </div>
           </CardContent>
 
-          <CardFooter className="flex flex-col space-y-8">
-            <iframe
-              className="focus:outline-none rounded-sm bg-inherit"
-              src="https://discord.com/widget?id=1139558352007995545&theme=dark"
-              width="350"
-              height="500"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            ></iframe>
-          </CardFooter>
+          <CardFooter className="flex flex-col space-y-8"></CardFooter>
         </Card>
       </div>
     </div>
