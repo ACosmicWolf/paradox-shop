@@ -8,7 +8,7 @@ const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Paradox Shop",
-  description: "The Beautiful Paradox Shop",
+  description: "Phele Istemal Kro Phir Vishwas Kro",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(quicksand.className, "dark")}>
-        <Navbar />
+        
         <div className="">       
           {children}
         </div>

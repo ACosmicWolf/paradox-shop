@@ -12,7 +12,7 @@ export default function Landingpage() {
         <FadeInSection>
           <div className="title-wrap p-1 box-border">
          <h1 className="hero-head ">Paradox Shop</h1>
-          <h4>arsh tu likh usse puch liyo</h4>
+          <h4>This is the shop all you need</h4>
           </div>
             <div className="hero-head-btn-wrap">
              <a className="fancy" href="#">
@@ -33,18 +33,26 @@ export default function Landingpage() {
           <div className="card ">
             <div className="headcard go">NITRO</div>
             <div className="img go">
-              <img src="\public\62a315f45888ab5517509314_b941bc1dfe379db6cc1f2acc5a612f41.png" alt="nitro" className="hero-card-img w-full h-full object-cover"/>
+              <img src="/62a315f45888ab5517509314_b941bc1dfe379db6cc1f2acc5a612f41.png" alt="nitro" className="hero-card-img w-full h-full object-cover"/>
             </div> {/* NITRO IMAGE */} 
             <div className="btnBuynow go"> {/* BUY NOW BUTTON WILL GO  */}
-
+              <button className="btn-buy-now-card">
+                <span className="hm">BUY NOW</span>
+                </button>
             </div>
           </div>
           </FadeInSection>
           <FadeInSection>
           <div className="card card2">
             <div className="headcard go">VCC</div>
-            <div className="img go"></div>
-            <div className="btnBuynow go"></div>
+            <div className="img go">
+              <img src="/62a315f45888ab5517509314_b941bc1dfe379db6cc1f2acc5a612f41.png" alt="vcc" className="hero-card-img w-full h-full object-cover"/>
+            </div>
+            <div className="btnBuynow go">
+              <button className="btn-buy-now-card">
+                <span className="hm">BUY NOW</span>
+              </button>
+            </div>
           </div>
           </FadeInSection>
         </div>
