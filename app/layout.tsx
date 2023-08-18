@@ -20,9 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(quicksand.className, "dark")}>
         <Navbar />
-        <div className="p-8 mt-14">
-          <SvgBG />
-
+        <div className="">       
           {children}
         </div>
       </body>
